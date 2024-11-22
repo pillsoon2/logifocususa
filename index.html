@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIFOCUS USA, INC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1E3A8A',
+                        'secondary-blue': '#2563EB',
+                        'accent-green': '#10B981'
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
-    <header class="bg-white shadow">
+    <header class="bg-white shadow fixed w-full z-50">
         <div class="container mx-auto p-6 flex flex-wrap items-center justify-between">
-            <img src="logo.png" alt="Logifocus Logo" class="h-12">
+            <img src="logo.svg" alt="Logifocus Logo" class="h-16">
             <button id="menu-toggle" class="block md:hidden text-blue-800">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -18,68 +41,86 @@
             </button>
             <nav id="menu" class="hidden w-full md:block md:w-auto">
                 <ul class="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-center">
-                    <li><a href="#mission" class="block py-2 px-4 hover:underline">Mission</a></li>
-                    <li><a href="#vision" class="block py-2 px-4 hover:underline">Vision</a></li>
-                    <li><a href="#values" class="block py-2 px-4 hover:underline">Values</a></li>
-                    <li><a href="#services" class="block py-2 px-4 hover:underline">Services</a></li>
-                    <li><a href="#business" class="block py-2 px-4 hover:underline">Business</a></li>
-                    <li><a href="#contact" class="block py-2 px-4 hover:underline">Contact</a></li>
+                    <li><a href="#mission-vision" class="block py-2 px-4 hover:text-secondary-blue transition transform hover:scale-105">Mission & Vision</a></li>
+                    <li><a href="#values" class="block py-2 px-4 hover:text-secondary-blue transition transform hover:scale-105">Values</a></li>
+                    <li><a href="#services" class="block py-2 px-4 hover:text-secondary-blue transition transform hover:scale-105">Services</a></li>
+                    <li><a href="#business" class="block py-2 px-4 hover:text-secondary-blue transition transform hover:scale-105">Business</a></li>
+                    <li><a href="#resources" class="block py-2 px-4 hover:text-secondary-blue transition transform hover:scale-105">Resource & Link</a></li>
+                    <li><a href="#contact" class="block py-2 px-4 hover:text-secondary-blue transition transform hover:scale-105">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-cover bg-center h-screen text-center flex items-center justify-center px-6" style="background-image: url('background.jpg');">
-        <div class="bg-black bg-opacity-50 p-10 rounded-lg text-white">
-            <h1 class="text-4xl md:text-5xl font-bold">LOGIFOCUS USA, INC</h1>
-            <p class="mt-4 text-lg md:text-xl">Innovative and Reliable Logistic Solutions for the Global Market.</p>
-            <a href="#services" class="mt-6 inline-block bg-blue-600 px-6 py-3 text-lg rounded-lg hover:bg-blue-700">Explore Our Services</a>
+    <section class="bg-cover bg-center h-screen text-center flex items-center justify-center px-6 pt-16" style="background-image: url('./images/container-ship.jpg');">
+        <div class="bg-black bg-opacity-60 p-10 rounded-lg text-white transform -translate-y-10 shadow-2xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">LOGIFOCUS USA, INC</h1>
+            <p class="mt-4 text-lg md:text-xl mb-6 text-shadow">Innovative and Reliable Logistic Solutions for the Global Market</p>
+            <a href="#contact" class="inline-block bg-secondary-blue px-8 py-4 text-lg rounded-lg hover:bg-primary-blue transition transform hover:scale-105 shadow-lg">
+                Contact Us
+            </a>
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section id="mission" class="py-12 bg-gray-100 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-6">Mission Statement</h2>
-            <p class="text-center max-w-3xl mx-auto">Our mission is to provide innovative and top-quality logistic solutions that deliver operational excellence to our customers. We aim to consistently improve the logistic supply chain and exceed expectations through creative, cost-effective solutions.</p>
-        </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision" class="py-12 bg-white px-6">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-6">Vision</h2>
-            <p class="text-center max-w-3xl mx-auto">To build trusting and in-depth relationships with customers and be recognized as a role model in the logistics industry by providing integrated, cost-effective, and proficient services tailored to unique and ever-changing needs.</p>
+    <!-- Mission and Vision Section -->
+    <section id="mission-vision" class="py-24 bg-gray-50 scroll-mt-20">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Mission Section -->
+            <div class="relative h-[500px] lg:h-[600px] flex items-center">
+                <div class="absolute inset-0">
+                    <img src="./images/background1.jpg" alt="Mission Background" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative z-10 p-10 lg:p-16 text-white text-center lg:text-left">
+                    <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-lg lg:text-xl leading-relaxed">
+                        Our mission is to provide innovative and top-quality logistic solutions that deliver operational excellence to our customers. We aim to consistently improve the logistic supply chain and exceed expectations through creative, cost-effective solutions.
+                    </p>
+                </div>
+            </div>
+            <!-- Vision Section -->
+            <div class="relative h-[500px] lg:h-[600px] flex items-center">
+                <div class="absolute inset-0">
+                    <img src="./images/background2.jpg" alt="Vision Background" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative z-10 p-10 lg:p-16 text-white text-center lg:text-left">
+                    <h2 class="text-4xl font-bold mb-6">Our Vision</h2>
+                    <p class="text-lg lg:text-xl leading-relaxed">
+                        To build trusting and in-depth relationships with customers and be recognized as a role model in the logistics industry by providing integrated, cost-effective, and proficient services tailored to unique and ever-changing needs.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Values Section -->
-    <section id="values" class="py-12 bg-gray-100 px-6">
+    <section id="values" class="py-12 bg-white scroll-mt-20">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Our Core Values</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-bold mb-4">Innovative</h3>
                     <p>We are always open-minded and seek creative solutions.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-bold mb-4">Quality</h3>
                     <p>We ensure value in everything we think and do.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-bold mb-4">Reliability</h3>
                     <p>On-time, accurate, and complete communication for maximum supply chain reliability.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-bold mb-4">Integrity</h3>
                     <p>We pledge to act with honesty and fairness at all times.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-bold mb-4">Respect</h3>
                     <p>Respect in daily life fosters operational excellence and loyalty.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-bold mb-4">Teamwork</h3>
                     <p>Dedicated team members encourage personal and professional growth in a safe working environment.</p>
                 </div>
@@ -87,13 +128,265 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 bg-white px-6">
+    <!-- Services Section -->
+    <section id="services" class="py-12 bg-gray-100 px-6 scroll-mt-20">
+        <div class="container mx-auto p-6 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-teal-500 mb-4">
+                        <img src="./icons/export.svg" alt="Export Services" class="h-12 w-12 mx-auto" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Export (Air / Ocean)</h3>
+                    <p class="text-center">Comprehensive air and ocean export services tailored to global shipping needs.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-teal-500 mb-4">
+                        <img src="./icons/import.svg" alt="Import Services" class="h-12 w-12 mx-auto" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Import (Air / Ocean)</h3>
+                    <p class="text-center">Efficient import handling with customs compliance and fast delivery solutions.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-teal-500 mb-4">
+                        <img src="./icons/customs-brokerage.svg" alt="Customs Brokerage" class="h-12 w-12 mx-auto" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Customs Brokerage</h3>
+                    <p class="text-center">Expert customs clearance and trade compliance solutions for seamless logistics.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-teal-500 mb-4">
+                        <img src="./icons/warehouse.svg" alt="3PL Warehouse" class="h-12 w-12 mx-auto" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">3PL Warehouse</h3>
+                    <p class="text-center">Comprehensive 3PL warehouse management with real-time inventory tracking.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-teal-500 mb-4">
+                        <img src="./icons/trucking.svg" alt="Trucking Services" class="h-12 w-12 mx-auto" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Trucking</h3>
+                    <p class="text-center">Reliable domestic trucking services for fast and secure cargo transportation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Domains Section -->
+    <section id="business" class="py-12 bg-white px-6 scroll-mt-20  scroll-mt-20">
         <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Our Business Domains</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md ">
+                    <h3 class="text-xl font-bold mb-4">Freight Services</h3>
+                    <p>Comprehensive air, ocean, and domestic freight solutions with specialized handling for perishable and oversized cargo.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md ">
+                    <h3 class="text-xl font-bold mb-4">Customs Brokerage</h3>
+                    <p>Seamless customs clearance, including remote filing, warehouse entry, and compliance consulting.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md ">
+                    <h3 class="text-xl font-bold mb-4">SCM Consultancy</h3>
+                    <p>Strategic logistics planning and inventory management for operational excellence.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md ">
+                    <h3 class="text-xl font-bold mb-4">Information Systems</h3>
+                    <p>Advanced technologies for logistics visibility, tracking, and smart solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links and Resources Section -->
+    <section id="resources" class="py-12 bg-gray-50 px-6 scroll-mt-20">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Resources and Links</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                <!-- Ocean Carriers -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-4 text-center">Ocean Carriers</h3>
+                    <div class="space-y-2">
+                        <a href="https://www.hmm21.com/cms/business/ebiz/index.jsp" target="_blank" class="block bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-teal-600 transition">
+                            Hyundai
+                        </a>
+                        <a href="https://esvc.smlines.com/smline/CUP_HOM_3000.do?redir=Y&amp;sessLocale=en" target="_blank" class="block bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-teal-600 transition">
+                            SM Line
+                        </a>
+                        <a href="https://www.evergreen-line.com/" target="_blank" class="block bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-teal-600 transition">
+                            Evergreen
+                        </a>
+                        <a href="https://www.one-line.com/en" target="_blank" class="block bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-teal-600 transition">
+                            ONE Line
+                        </a>
+                        <a href="https://www.oocl.com/eng/Pages/default.aspx" target="_blank" class="block bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-teal-600 transition">
+                            OOCL
+                        </a>
+                    </div>
+                </div>
+                <!-- Air Carriers -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-4 text-center">Air Carriers</h3>
+                    <div class="space-y-2">
+                        <a href="https://cargo.koreanair.com/eng/main/iMain.jsp" target="_blank" class="block bg-purple-500 text-white py-2 px-4 rounded-lg text-center hover:bg-purple-600 transition">
+                            Korean Air
+                        </a>
+                        <a href="https://www.asianacargo.com/home.do?lang=en" target="_blank" class="block bg-purple-500 text-white py-2 px-4 rounded-lg text-center hover:bg-purple-600 transition">
+                            Asiana Airlines
+                        </a>
+                        <a href="https://www.yangming.com/e-service/track_trace/track_trace_cargo_tracking.aspx" target="_blank" class="block bg-purple-500 text-white py-2 px-4 rounded-lg text-center hover:bg-purple-600 transition">
+                            Yang Ming
+                        </a>
+                        <a href="http://tang.csair.com/EN/WebFace/Tang.WebFace.Cargo/AgentAwbBrower.aspx?lan=en-us" target="_blank" class="block bg-purple-500 text-white py-2 px-4 rounded-lg text-center hover:bg-purple-600 transition">
+                            China Southern
+                        </a>
+                        <a href="https://www.brcargo.com/ec_web/Default.aspx" target="_blank" class="block bg-purple-500 text-white py-2 px-4 rounded-lg text-center hover:bg-purple-600 transition">
+                            EVA Airline
+                        </a>
+                    </div>
+                </div>
+                <!-- Government Agencies -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-4 text-center">Government Agencies</h3>
+                    <div class="space-y-2">
+                        <a href="http://www.cbp.gov" target="_blank" class="block bg-blue-500 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-600 transition">
+                            US Customs
+                        </a>
+                        <a href="http://www.fda.gov" target="_blank" class="block bg-blue-500 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-600 transition">
+                            FDA
+                        </a>
+                        <a href="http://www.epa.gov" target="_blank" class="block bg-blue-500 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-600 transition">
+                            EPA
+                        </a>
+                        <a href="http://www.ftc.gov" target="_blank" class="block bg-blue-500 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-600 transition">
+                            FTC
+                        </a>
+                        <a href="http://www.usitc.gov" target="_blank" class="block bg-blue-500 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-600 transition">
+                            ITC
+                        </a>
+                    </div>
+                </div>
+                <!-- Forms -->
+                <!-- Forms Section -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-4 text-center">Forms</h3>
+                    <div class="space-y-2">
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_1f438c82361b4f9b9b409e39da5ac93e.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Broker of Record Letter
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_f29a8ad06e9845c3a5bb25362905f3e8.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Single Entry / ISF Bond Application (1 of 2)
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_b8e523bdabd84f999dfeb93bbde330e9.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Single Entry / ISF Bond Application (2 of 2)
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_20ec9434dcc14dd89543a28e619a0300.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Direct Payment Waiver Statement
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_50a4dca2588d4c92ac04b4ce0501f334.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Power of Attorney
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_1a964e943bfe4c8a931f967f7c0c0624.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Continuous Bond Application (1 of 2)
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_b8e523bdabd84f999dfeb93bbde330e9.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Continuous Bond Application (2 of 2)
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_1ed969ff3e94485fa62e059fb148e62a.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            10+2 / ISF Application (TYPE 1)
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_15e4942ccd6f48cdbff401bb95f3aff9.xls?dn=6.%20J%26A%20ISF%2010%2B2_type2_blank-----(f).xls" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            10+2 / ISF Application (TYPE 2)
+                        </a>
+                        <a href="https://ca89983a-7a73-4a55-938b-0ba31fcfdaf6.filesusr.com/ugd/6329c8_5fad05b88286445e97d536a15db3d5ea.pdf" target="_blank" class="block bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-green-600 transition">
+                            Non-resident Corporate Certification
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-gray-100 px-6 scroll-mt-20">
+        <div class="container mx-auto">
+            <!-- Section Title -->
             <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
-            <p class="text-center">500 E. Carson Plaza Dr #219, Carson, CA 90746</p>
-            <p class="text-center">Phone: (310) 515-0077</p>
-            <p class="text-center">Email: <a href="mailto:Info@logiusa.com" class="text-blue-600 hover:underline">Info@logiusa.com</a></p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Company Details -->
+                <div class="p-6 bg-gradient-to-br from-blue-50 to-blue-100 text-gray-900 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6">Company Details</h3>
+                    <div class="space-y-6">
+                    <!-- Address -->
+                        <div class="flex items-start">
+                            <img src="./icons/address.svg" alt="Address Icon" class="h-8 w-8 mr-4" />
+                            <div>
+                                <p class="text-lg font-medium">1501 E. Orangethorpe Ave Suite 140</p>
+                                <p class="text-lg font-medium">Fullerton, CA 92831</p>
+                                <p class="text-lg font-medium">(Fullerton Business Center)</p>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <img src="./icons/email.svg" alt="Email Icon" class="h-8 w-8 mr-4" />
+                            <div>
+                                <p class="text-lg font-medium">
+                                    Email: 
+                                    <a href="mailto:info@jnachb.com" class="underline hover:text-blue-500">info@jnachb.com</a>, 
+                                    <a href="mailto:entry@jnachb.com" class="underline hover:text-blue-500">entry@jnachb.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="flex items-center">
+                            <img src="./icons/phone.svg" alt="Phone Icon" class="h-8 w-8 mr-4" />
+                            <div>
+                                <p class="text-lg font-medium">Tel: 310-515-0077</p>
+                                <p class="text-lg font-medium">Fax: 310-515-0072</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <form action="https://formsubmit.co/your-email-here" method="POST" class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Contact Form</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name *</label>
+                            <input type="text" id="name" name="name" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        </div>
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
+                            <input type="email" id="email" name="email" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        </div>
+                    </div>
+                    <!-- Subject -->
+                    <div class="mt-4">
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                        <input type="text" id="subject" name="subject" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <!-- Message -->
+                    <div class="mt-4">
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="5" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="mt-6 text-center">
+                        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                            Send
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -109,6 +402,73 @@
         menuToggle.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.classList.add('transform', 'scale-105', 'transition');
+            });
+            link.addEventListener('mouseleave', function() {
+                this.classList.remove('transform', 'scale-105', 'transition');
+            });
+        });
+
+        // Form Validation
+        const contactForm = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+
+        contactForm.addEventListener('submit', function(e) {
+            let isValid = true;
+
+            // Name validation
+            if (nameInput.value.trim() === '') {
+                nameError.classList.remove('hidden');
+                nameInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                nameError.classList.add('hidden');
+                nameInput.classList.remove('border-red-500');
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.classList.remove('hidden');
+                emailInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                emailError.classList.add('hidden');
+                emailInput.classList.remove('border-red-500');
+            }
+
+            // Message validation
+            if (messageInput.value.trim() === '') {
+                messageError.classList.remove('hidden');
+                messageInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                messageError.classList.add('hidden');
+                messageInput.classList.remove('border-red-500');
+            }
+
+            if (!isValid) {
+                e.preventDefault();
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
+    
 </body>
 </html>
