@@ -9,30 +9,37 @@
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header class="bg-white shadow">
-        <div class="container mx-auto p-6 flex justify-between items-center">
+        <div class="container mx-auto p-6 flex flex-wrap items-center justify-between">
             <img src="logo.png" alt="Logifocus Logo" class="h-12">
-            <nav>
-                <a href="#mission" class="mx-2 hover:underline">Mission</a>
-                <a href="#vision" class="mx-2 hover:underline">Vision</a>
-                <a href="#values" class="mx-2 hover:underline">Values</a>
-                <a href="#services" class="mx-2 hover:underline">Services</a>
-                <a href="#business" class="mx-2 hover:underline">Business</a>
-                <a href="#contact" class="mx-2 hover:underline">Contact</a>
+            <button id="menu-toggle" class="block md:hidden text-blue-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <nav id="menu" class="hidden w-full md:block md:w-auto">
+                <ul class="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-center">
+                    <li><a href="#mission" class="block py-2 px-4 hover:underline">Mission</a></li>
+                    <li><a href="#vision" class="block py-2 px-4 hover:underline">Vision</a></li>
+                    <li><a href="#values" class="block py-2 px-4 hover:underline">Values</a></li>
+                    <li><a href="#services" class="block py-2 px-4 hover:underline">Services</a></li>
+                    <li><a href="#business" class="block py-2 px-4 hover:underline">Business</a></li>
+                    <li><a href="#contact" class="block py-2 px-4 hover:underline">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-cover bg-center h-screen text-center flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1920x1080');">
+    <section class="bg-cover bg-center h-screen text-center flex items-center justify-center px-6" style="background-image: url('background.jpg');">
         <div class="bg-black bg-opacity-50 p-10 rounded-lg text-white">
-            <h1 class="text-4xl font-bold">LOGIFOCUS USA, INC</h1>
-            <p class="mt-4 text-lg">Innovative and Reliable Logistic Solutions for the Global Market.</p>
-            <a href="#services" class="mt-6 inline-block bg-blue-600 px-6 py-2 text-lg rounded-lg hover:bg-blue-700">Explore Our Services</a>
+            <h1 class="text-4xl md:text-5xl font-bold">LOGIFOCUS USA, INC</h1>
+            <p class="mt-4 text-lg md:text-xl">Innovative and Reliable Logistic Solutions for the Global Market.</p>
+            <a href="#services" class="mt-6 inline-block bg-blue-600 px-6 py-3 text-lg rounded-lg hover:bg-blue-700">Explore Our Services</a>
         </div>
     </section>
 
     <!-- Mission Section -->
-    <section id="mission" class="py-12 bg-gray-100">
+    <section id="mission" class="py-12 bg-gray-100 px-6">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Mission Statement</h2>
             <p class="text-center max-w-3xl mx-auto">Our mission is to provide innovative and top-quality logistic solutions that deliver operational excellence to our customers. We aim to consistently improve the logistic supply chain and exceed expectations through creative, cost-effective solutions.</p>
@@ -40,7 +47,7 @@
     </section>
 
     <!-- Vision Section -->
-    <section id="vision" class="py-12 bg-white">
+    <section id="vision" class="py-12 bg-white px-6">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Vision</h2>
             <p class="text-center max-w-3xl mx-auto">To build trusting and in-depth relationships with customers and be recognized as a role model in the logistics industry by providing integrated, cost-effective, and proficient services tailored to unique and ever-changing needs.</p>
@@ -48,10 +55,10 @@
     </section>
 
     <!-- Values Section -->
-    <section id="values" class="py-12 bg-gray-100">
+    <section id="values" class="py-12 bg-gray-100 px-6">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Our Core Values</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-bold mb-4">Innovative</h3>
                     <p>We are always open-minded and seek creative solutions.</p>
@@ -80,48 +87,8 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-12 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-6">Our Services</h2>
-            <ul class="list-disc list-inside text-center max-w-3xl mx-auto">
-                <li>Freight Services (Air, Ocean, Domestic)</li>
-                <li>Customs Brokerage Services</li>
-                <li>SCM Consultancy and Logistics Planning</li>
-                <li>Information Systems for Smart Logistics</li>
-                <li>Warehouse Operations and Management</li>
-                <li>Transportation Management Solutions</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Business Domains -->
-    <section id="business" class="py-12 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-6">Our Business Domains</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">Freight Services</h3>
-                    <p>Comprehensive air, ocean, and domestic freight solutions with specialized handling for perishable and oversized cargo.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">Customs Brokerage</h3>
-                    <p>Seamless customs clearance, including remote filing, warehouse entry, and compliance consulting.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">SCM Consultancy</h3>
-                    <p>Strategic logistics planning and inventory management for operational excellence.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">Information Systems</h3>
-                    <p>Advanced technologies for logistics visibility, tracking, and smart solutions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="py-12 bg-white">
+    <section id="contact" class="py-12 bg-white px-6">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
             <p class="text-center">500 E. Carson Plaza Dr #219, Carson, CA 90746</p>
@@ -134,5 +101,14 @@
     <footer class="bg-blue-800 text-white text-center py-6">
         <p>&copy; 2024 LOGIFOCUS USA, INC. All rights reserved.</p>
     </footer>
+
+    <!-- Script for Menu Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
