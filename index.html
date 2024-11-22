@@ -6,26 +6,28 @@
     <title>LOGIFOCUS USA, INC</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800">
     <!-- Header -->
-    <header class="bg-blue-800 text-white">
+    <header class="bg-white shadow">
         <div class="container mx-auto p-6 flex justify-between items-center">
             <img src="logo.png" alt="Logifocus Logo" class="h-12">
             <nav>
                 <a href="#mission" class="mx-2 hover:underline">Mission</a>
                 <a href="#vision" class="mx-2 hover:underline">Vision</a>
+                <a href="#values" class="mx-2 hover:underline">Values</a>
                 <a href="#services" class="mx-2 hover:underline">Services</a>
+                <a href="#business" class="mx-2 hover:underline">Business</a>
                 <a href="#contact" class="mx-2 hover:underline">Contact</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gray-100 text-center py-20">
-        <div class="container mx-auto">
-            <h1 class="text-4xl font-bold mb-4">Welcome to LOGIFOCUS USA</h1>
-            <p class="text-lg">A Company of Logistics Thinkers</p>
-            <p class="text-lg mt-2">Innovative. Reliable. Global.</p>
+    <section class="bg-cover bg-center h-screen text-center flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1920x1080');">
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg text-white">
+            <h1 class="text-4xl font-bold">LOGIFOCUS USA, INC</h1>
+            <p class="mt-4 text-lg">Innovative and Reliable Logistic Solutions for the Global Market.</p>
+            <a href="#services" class="mt-6 inline-block bg-blue-600 px-6 py-2 text-lg rounded-lg hover:bg-blue-700">Explore Our Services</a>
         </div>
     </section>
 
@@ -33,7 +35,7 @@
     <section id="mission" class="py-12 bg-gray-100">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Mission Statement</h2>
-            <p class="text-center max-w-3xl mx-auto">Our mission is to provide innovative and top-quality logistic solutions that deliver operational excellence to our customers in the global market. We aim to consistently improve the quality of the logistic supply chain and exceed expectations through creative, cost-effective solutions.</p>
+            <p class="text-center max-w-3xl mx-auto">Our mission is to provide innovative and top-quality logistic solutions that deliver operational excellence to our customers. We aim to consistently improve the logistic supply chain and exceed expectations through creative, cost-effective solutions.</p>
         </div>
     </section>
 
@@ -41,30 +43,78 @@
     <section id="vision" class="py-12 bg-white">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Vision</h2>
-            <p class="text-center max-w-3xl mx-auto">To build trusting relationships with our customers and be recognized as a role model in the logistics industry by providing integrated, cost-effective, and proficient services tailored to unique and ever-changing needs.</p>
+            <p class="text-center max-w-3xl mx-auto">To build trusting and in-depth relationships with customers and be recognized as a role model in the logistics industry by providing integrated, cost-effective, and proficient services tailored to unique and ever-changing needs.</p>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="py-12 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Innovative</h3>
+                    <p>We are always open-minded and seek creative solutions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Quality</h3>
+                    <p>We ensure value in everything we think and do.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Reliability</h3>
+                    <p>On-time, accurate, and complete communication for maximum supply chain reliability.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Integrity</h3>
+                    <p>We pledge to act with honesty and fairness at all times.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Respect</h3>
+                    <p>Respect in daily life fosters operational excellence and loyalty.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Teamwork</h3>
+                    <p>Dedicated team members encourage personal and professional growth in a safe working environment.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-12 bg-gray-100">
+    <section id="services" class="py-12 bg-white">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul class="list-disc list-inside text-center max-w-3xl mx-auto">
+                <li>Freight Services (Air, Ocean, Domestic)</li>
+                <li>Customs Brokerage Services</li>
+                <li>SCM Consultancy and Logistics Planning</li>
+                <li>Information Systems for Smart Logistics</li>
+                <li>Warehouse Operations and Management</li>
+                <li>Transportation Management Solutions</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Business Domains -->
+    <section id="business" class="py-12 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Our Business Domains</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-bold mb-4">Freight Services</h3>
-                    <p>Offering air, ocean, and domestic freight solutions including perishable cargo and governmental logistics.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">SCM Consultancy</h3>
-                    <p>Providing strategic logistics planning, performance management, and inventory solutions.</p>
+                    <p>Comprehensive air, ocean, and domestic freight solutions with specialized handling for perishable and oversized cargo.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-bold mb-4">Customs Brokerage</h3>
-                    <p>Fast customs clearance services including remote filing, warehouse entry, and trade show assistance.</p>
+                    <p>Seamless customs clearance, including remote filing, warehouse entry, and compliance consulting.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">SCM Consultancy</h3>
+                    <p>Strategic logistics planning and inventory management for operational excellence.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-bold mb-4">Information Systems</h3>
-                    <p>Integration of advanced logistics technologies such as RFID, KPI management, and visibility solutions.</p>
+                    <p>Advanced technologies for logistics visibility, tracking, and smart solutions.</p>
                 </div>
             </div>
         </div>
